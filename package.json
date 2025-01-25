@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Rituparna Warwatkar Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev",
+    "tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./public/assets/styles.css --watch"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Rituparna W",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}
