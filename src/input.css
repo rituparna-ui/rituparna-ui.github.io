@@ -70,3 +70,15 @@ body {
 .g-blue {
   color: #4885ed !important;
 }
+
+.scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll::-webkit-scrollbar-track {
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #1e2328;
+  border-radius: 999px;
+}
