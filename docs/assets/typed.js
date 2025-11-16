@@ -1,11 +1,13 @@
 new Typed(".typed", {
   strings: [
-    "a Full Stack Developer.",
-    "a ME(F/A/R/V)N Stack Developer.",
-    "a Backend Developer.",
-    "an Angular Developer.",
-    "a Flutter Developer.",
-    "a React Developer.",
+    "I'm an Embedded Engineer.",
+    "I'm a hardware enthusiast.",
+    "I love systems development.",
+    "I love low level development.",
+    "I'm learning kernel and hypervisor development",
+    "I'm diving deep into aarch64",
+    "I'm a ME(F/A/R/V)N Stack Developer.",
+    "I'm a Full Stack Developer"
   ],
   typeSpeed: 50,
   backSpeed: 50,
