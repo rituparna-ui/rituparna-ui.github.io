@@ -2,13 +2,18 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F72QT38T0D"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-F72QT38T0D"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-F72QT38T0D');
+      gtag("config", "G-F72QT38T0D");
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +27,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
-    
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#1f2937" />
+
     <!-- Theme script loaded early to prevent flash -->
     <script src="/assets/theme.js"></script>
 
@@ -55,7 +64,9 @@
       content="https://avatars.githubusercontent.com/u/54203587?v=4"
     />
   </head>
-  <body class="montserrat bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <body
+    class="montserrat bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+  >
     <div id="particles" class="h-full"></div>
     <div class="flex flex-col h-full w-full" id="content">
       <header class="p-4 flex justify-center">
@@ -75,12 +86,13 @@
             <h2 class="uno text-lg">
               <a href="/assets/resume.pdf" target="_blank">Resume</a>
             </h2>
-            <button 
-              id="theme-toggle" 
+            <button
+              id="theme-toggle"
               type="button"
               class="theme-toggle-btn"
               aria-label="Toggle dark mode"
-              aria-pressed="false">
+              aria-pressed="false"
+            >
               <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
             </button>
           </div>
@@ -90,7 +102,9 @@
         class="flex-grow flex justify-center items-center flex-col text-center"
       >
         <img src="/assets/img/logo.png" alt="Rituparna W" class="r-logo" />
-        <h1 class="font-medium text-3xl mb-2 -mt-4 text-gray-900 dark:text-gray-100">
+        <h1
+          class="font-medium text-3xl mb-2 -mt-4 text-gray-900 dark:text-gray-100"
+        >
           <span class="typed"></span>
         </h1>
         <p class="text-lg my-2 text-gray-800 dark:text-gray-200">
@@ -99,7 +113,9 @@
         <p class="text-lg font-semibold mt-2 text-gray-900 dark:text-gray-100">
           Embedded Engineering @ Amazon Web Services, EC2
         </p>
-        <p class="text-md font-mono bg-slate-100 dark:bg-slate-800 p-2 font-semibold text-gray-900 dark:text-gray-100">
+        <p
+          class="text-md font-mono bg-slate-100 dark:bg-slate-800 p-2 font-semibold text-gray-900 dark:text-gray-100"
+        >
           ~ building EC2 - Accelerated Nitro Platforms
         </p>
         <div class="mt-4 flex flex-col items-center gap-1">
@@ -110,7 +126,9 @@
               class="w-8"
             />
           </div>
-          <p class="font-semibold text-gray-900 dark:text-gray-100">Berlin, Germany</p>
+          <p class="font-semibold text-gray-900 dark:text-gray-100">
+            Berlin, Germany
+          </p>
         </div>
         <div class="mt-4 flex gap-6">
           <a
@@ -186,6 +204,26 @@
           }
         });
       });
+    </script>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log(
+                "Service Worker registered successfully:",
+                registration.scope
+              );
+            })
+            .catch((error) => {
+              console.error("Service Worker registration failed:", error);
+            });
+        });
+      } else {
+        console.log("Service Workers are not supported in this browser");
+      }
     </script>
   </body>
 </html>
